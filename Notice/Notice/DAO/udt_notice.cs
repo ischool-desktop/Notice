@@ -10,7 +10,7 @@ namespace Notice.DAO
     /// <summary>
     /// Notice
     /// </summary>
-    [TableName("notice")]
+    [TableName("1campus.notice")]
     public class udt_notice:ActiveRecord
     {
 
@@ -51,7 +51,7 @@ namespace Notice.DAO
         ///<summary>
         /// 發送教師系統編號
         ///</summary>
-        [Field(Field = "ref_teacher_id", Indexed = true)]
+        [Field(Field = "ref_teacher_id", Indexed = false)]
         public int TeacherID { get; set; }
     }
 }

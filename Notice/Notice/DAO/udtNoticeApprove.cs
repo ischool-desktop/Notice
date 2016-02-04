@@ -9,7 +9,7 @@ namespace Notice.DAO
     /// <summary>
     /// NoticeApprove
     /// </summary>
-    [TableName("notice_approve")]
+    [TableName("1campus.notice_approve")]
     public class udtNoticeApprove:ActiveRecord
     {
         ///<summary>
