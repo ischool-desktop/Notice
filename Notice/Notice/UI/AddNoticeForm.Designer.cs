@@ -38,7 +38,6 @@
             this.cboDisplaySender = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.dtPostTime = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtPostTime)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +70,7 @@
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtMessage.Size = new System.Drawing.Size(566, 158);
-            this.txtMessage.TabIndex = 3;
+            this.txtMessage.TabIndex = 1;
             // 
             // labelX2
             // 
@@ -97,11 +96,11 @@
             // 
             this.labelX3.BackgroundStyle.Class = "";
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(12, 329);
+            this.labelX3.Location = new System.Drawing.Point(283, 262);
             this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(101, 21);
+            this.labelX3.Size = new System.Drawing.Size(47, 21);
             this.labelX3.TabIndex = 4;
-            this.labelX3.Text = "發送者顯示名稱";
+            this.labelX3.Text = "發送者";
             this.labelX3.WordWrap = true;
             // 
             // btnAdd
@@ -110,7 +109,7 @@
             this.btnAdd.AutoSize = true;
             this.btnAdd.BackColor = System.Drawing.Color.Transparent;
             this.btnAdd.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAdd.Location = new System.Drawing.Point(417, 373);
+            this.btnAdd.Location = new System.Drawing.Point(415, 334);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 25);
             this.btnAdd.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -124,7 +123,7 @@
             this.btnExit.AutoSize = true;
             this.btnExit.BackColor = System.Drawing.Color.Transparent;
             this.btnExit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnExit.Location = new System.Drawing.Point(502, 373);
+            this.btnExit.Location = new System.Drawing.Point(500, 334);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 25);
             this.btnExit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -138,7 +137,7 @@
             this.cboDisplaySender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboDisplaySender.FormattingEnabled = true;
             this.cboDisplaySender.ItemHeight = 19;
-            this.cboDisplaySender.Location = new System.Drawing.Point(12, 353);
+            this.cboDisplaySender.Location = new System.Drawing.Point(283, 290);
             this.cboDisplaySender.Name = "cboDisplaySender";
             this.cboDisplaySender.Size = new System.Drawing.Size(200, 25);
             this.cboDisplaySender.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -154,7 +153,6 @@
             this.dtPostTime.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dtPostTime.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.dtPostTime.ButtonDropDown.Visible = true;
-            this.dtPostTime.CustomFormat = "yyyy/MM/dd hh:mm:ss";
             this.dtPostTime.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dtPostTime.IsPopupCalendarOpen = false;
             this.dtPostTime.Location = new System.Drawing.Point(12, 290);
@@ -202,7 +200,7 @@
             this.dtPostTime.MonthCalendar.TodayButtonVisible = true;
             this.dtPostTime.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
             this.dtPostTime.Name = "dtPostTime";
-            this.dtPostTime.Size = new System.Drawing.Size(200, 25);
+            this.dtPostTime.Size = new System.Drawing.Size(236, 25);
             this.dtPostTime.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dtPostTime.TabIndex = 2;
             // 
@@ -222,27 +220,17 @@
             this.labelX4.Text = "公告顯示時間";
             this.labelX4.WordWrap = true;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 89);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(566, 158);
-            this.textBox1.TabIndex = 1;
-            // 
             // AddNoticeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 410);
+            this.ClientSize = new System.Drawing.Size(593, 368);
             this.Controls.Add(this.labelX4);
             this.Controls.Add(this.dtPostTime);
             this.Controls.Add(this.cboDisplaySender);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.labelX3);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.txtTitle);
@@ -269,6 +257,5 @@
         private DevComponents.DotNetBar.Controls.ComboBoxEx cboDisplaySender;
         private DevComponents.Editors.DateTimeAdv.DateTimeInput dtPostTime;
         private DevComponents.DotNetBar.LabelX labelX4;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

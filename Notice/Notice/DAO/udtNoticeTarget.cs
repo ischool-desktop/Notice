@@ -9,7 +9,7 @@ namespace Notice.DAO
     /// <summary>
     /// NoticeTarget
     /// </summary>
-    [TableName("1campus.notice_target")]
+    [TableName("ischool.1campus.notice_target")]
     public class udtNoticeTarget:ActiveRecord
     {
         ///<summary>

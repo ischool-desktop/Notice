@@ -9,7 +9,7 @@ namespace Notice.DAO
     /// <summary>
     /// NoticeApprove
     /// </summary>
-    [TableName("1campus.notice_approve")]
+    [TableName("ischool.1campus.notice_approve")]
     public class udtNoticeApprove:ActiveRecord
     {
         ///<summary>
@@ -28,6 +28,6 @@ namespace Notice.DAO
         /// 允許顯示
         ///</summary>
         [Field(Field = "approve", Indexed = false)]
-        public bool Approve { get; set; }
+        public bool? Approve { get; set; }
     }
 }

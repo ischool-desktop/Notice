@@ -13,12 +13,12 @@ namespace Notice
         /// 建立使用到的 UDT Table
         /// </summary>
         public static void CreateUDTTable()
-        {
+        {            
             FISCA.UDT.SchemaManager Manager = new SchemaManager(new FISCA.DSAUtil.DSConnection(FISCA.Authentication.DSAServices.DefaultDataSource));
-            //Manager.SyncSchema(new udt_notice());
-            //Manager.SyncSchema(new udtNoticeApprove());
-            //Manager.SyncSchema(new udtNoticeLog());
-            //Manager.SyncSchema(new udtNoticeTarget());
+            Manager.SyncSchema(new udtNotice());
+            Manager.SyncSchema(new udtNoticeApprove());
+            Manager.SyncSchema(new udtNoticeLog());
+            Manager.SyncSchema(new udtNoticeTarget());
         }
     }
 }

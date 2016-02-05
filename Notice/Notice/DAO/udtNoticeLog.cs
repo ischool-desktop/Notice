@@ -9,7 +9,7 @@ namespace Notice.DAO
     /// <summary>
     /// NoticeApprove
     /// </summary>
-    [TableName("1campus.notice_log")]
+    [TableName("ischool.1campus.notice_log")]
     public class udtNoticeLog:ActiveRecord
     {
 
@@ -31,7 +31,7 @@ namespace Notice.DAO
         /// Parent ID
         ///</summary>
         [Field(Field = "ref_parent_id", Indexed = false)]
-        public int ParentID { get; set; }
+        public int? ParentID { get; set; }
 
 
         ///<summary>
