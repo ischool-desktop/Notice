@@ -30,6 +30,8 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgData = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.btnSave = new DevComponents.DotNetBar.ButtonX();
+            this.btnExit = new DevComponents.DotNetBar.ButtonX();
             this.colApprove = new DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn();
             this.colTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMessage = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,8 +39,6 @@
             this.colDisplaySender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGlobalNotice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTeacher = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSave = new DevComponents.DotNetBar.ButtonX();
-            this.btnExit = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.dgData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,56 +74,6 @@
             this.dgData.Size = new System.Drawing.Size(893, 305);
             this.dgData.TabIndex = 0;
             // 
-            // colApprove
-            // 
-            this.colApprove.DisplayMember = "Text";
-            this.colApprove.DropDownHeight = 106;
-            this.colApprove.DropDownWidth = 121;
-            this.colApprove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.colApprove.HeaderText = "允許顯示";
-            this.colApprove.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.colApprove.IntegralHeight = false;
-            this.colApprove.ItemHeight = 17;
-            this.colApprove.Name = "colApprove";
-            this.colApprove.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            // 
-            // colTitle
-            // 
-            this.colTitle.HeaderText = "標題";
-            this.colTitle.Name = "colTitle";
-            this.colTitle.ReadOnly = true;
-            // 
-            // colMessage
-            // 
-            this.colMessage.HeaderText = "訊息";
-            this.colMessage.Name = "colMessage";
-            this.colMessage.ReadOnly = true;
-            this.colMessage.Width = 200;
-            // 
-            // colPostTime
-            // 
-            this.colPostTime.HeaderText = "公告顯示時間";
-            this.colPostTime.Name = "colPostTime";
-            this.colPostTime.ReadOnly = true;
-            // 
-            // colDisplaySender
-            // 
-            this.colDisplaySender.HeaderText = "發送者";
-            this.colDisplaySender.Name = "colDisplaySender";
-            this.colDisplaySender.ReadOnly = true;
-            // 
-            // colGlobalNotice
-            // 
-            this.colGlobalNotice.HeaderText = "全校性公告";
-            this.colGlobalNotice.Name = "colGlobalNotice";
-            this.colGlobalNotice.ReadOnly = true;
-            // 
-            // colTeacher
-            // 
-            this.colTeacher.HeaderText = "發送教師姓名";
-            this.colTeacher.Name = "colTeacher";
-            this.colTeacher.ReadOnly = true;
-            // 
             // btnSave
             // 
             this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -154,6 +104,60 @@
             this.btnExit.Text = "離開";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // colApprove
+            // 
+            this.colApprove.DisplayMember = "Text";
+            this.colApprove.DropDownHeight = 106;
+            this.colApprove.DropDownWidth = 121;
+            this.colApprove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.colApprove.HeaderText = "允許顯示";
+            this.colApprove.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.colApprove.IntegralHeight = false;
+            this.colApprove.ItemHeight = 17;
+            this.colApprove.Name = "colApprove";
+            this.colApprove.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.colApprove.Width = 60;
+            // 
+            // colTitle
+            // 
+            this.colTitle.HeaderText = "標題";
+            this.colTitle.Name = "colTitle";
+            this.colTitle.ReadOnly = true;
+            this.colTitle.Width = 120;
+            // 
+            // colMessage
+            // 
+            this.colMessage.HeaderText = "訊息";
+            this.colMessage.Name = "colMessage";
+            this.colMessage.ReadOnly = true;
+            this.colMessage.Width = 200;
+            // 
+            // colPostTime
+            // 
+            this.colPostTime.HeaderText = "公告顯示時間";
+            this.colPostTime.Name = "colPostTime";
+            this.colPostTime.ReadOnly = true;
+            this.colPostTime.Width = 120;
+            // 
+            // colDisplaySender
+            // 
+            this.colDisplaySender.HeaderText = "發送者";
+            this.colDisplaySender.Name = "colDisplaySender";
+            this.colDisplaySender.ReadOnly = true;
+            // 
+            // colGlobalNotice
+            // 
+            this.colGlobalNotice.HeaderText = "全校性公告";
+            this.colGlobalNotice.Name = "colGlobalNotice";
+            this.colGlobalNotice.ReadOnly = true;
+            this.colGlobalNotice.Width = 60;
+            // 
+            // colTeacher
+            // 
+            this.colTeacher.HeaderText = "發送教師姓名";
+            this.colTeacher.Name = "colTeacher";
+            this.colTeacher.ReadOnly = true;
+            // 
             // NoticeApproveForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -175,6 +179,8 @@
         #endregion
 
         private DevComponents.DotNetBar.Controls.DataGridViewX dgData;
+        private DevComponents.DotNetBar.ButtonX btnSave;
+        private DevComponents.DotNetBar.ButtonX btnExit;
         private DevComponents.DotNetBar.Controls.DataGridViewComboBoxExColumn colApprove;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMessage;
@@ -182,7 +188,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colDisplaySender;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGlobalNotice;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTeacher;
-        private DevComponents.DotNetBar.ButtonX btnSave;
-        private DevComponents.DotNetBar.ButtonX btnExit;
     }
 }
