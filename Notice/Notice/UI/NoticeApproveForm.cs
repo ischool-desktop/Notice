@@ -93,10 +93,68 @@ namespace Notice.UI
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            btnSave.Enabled = false;
+
             // 讀取畫面是否允許設定
             Dictionary<string, bool?> appDict = new Dictionary<string, bool?>();
-            
-            
+
+            try 
+            {
+                foreach (DataGridViewRow drv in dgData.Rows)
+                {
+                    string uid = drv.Tag.ToString();
+
+                    if (!string.IsNullOrEmpty(uid))
+                    {
+                        bool? bb;
+                        string strB = "";
+                        bb = null;
+                        
+                        if (drv.Cells[colApprove.Index].Value !=null)
+                            strB=drv.Cells[colApprove.Index].Value.ToString();
+
+                        if (strB == "是")
+                            bb = true;
+                        
+                        if (strB == "否")
+                            bb = false;                        
+
+                        if (!appDict.ContainsKey(uid))
+                            appDict.Add(uid, bb);
+                    }
+                }
+
+                List<udtNoticeApprove> updateNoticeApproveList = new List<udtNoticeApprove>();
+                // 修改是否引許相關資料
+                foreach (string key in appDict.Keys)
+                {
+                    bool? newB = appDict[key];
+
+                    if (_NoticeApproveDict.ContainsKey(key))
+                    {
+                        foreach (udtNoticeApprove nData in _NoticeApproveDict[key])
+                        {
+                            // 相同
+                            if (nData.Approve != newB)
+                            {
+                                nData.Approve = newB;
+                                updateNoticeApproveList.Add(nData);
+                            }
+                        }
+                    }
+                }
+
+                // 更新資料
+                if (updateNoticeApproveList.Count > 0)
+                    updateNoticeApproveList.SaveAll();
+
+                MsgBox.Show("儲存完成.");
+                this.Close();
+
+            }catch( Exception ex)
+            {
+                MsgBox.Show("儲存失敗," + ex.Message);
+            }            
         }
 
         private void LoadDataToDataGrid()
